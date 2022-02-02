@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/_partials/bs.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src="/_partials/bs.js"></script>
+    <title>Document</title>
+</head>
+<body>
+  <!-- set content height 100vh -->
+  <div class="min-vh-100">
+    <!-- Navbar Starts Here -->
+    <div class="container-fluid sticky-top bg-darkblue">
+    <div class="container-xxl">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+              <img src="/_partials/VinitamLogo.jpg" class="me-3" alt="" width="30" height="30">
+              <!-- <a class="navbar-brand" href="#">Vinitam</a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 font-monospace">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Name : Rajat</a>
+                </li>
+                <li class="nav-item d-none d-lg-block">
+                  <a class="nav-link" href="#"> | </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Class : 8th</a>
+                </li>
+                <li class="nav-item d-none d-lg-block">
+                  <a class="nav-link" href="#"> | </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Roll No : 10</a>
+                </li>
+                <li class="nav-item d-none d-lg-block">
+                  <a class="nav-link" href="#"> | </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Student Code : 2145879</a>
+                </li>
+                </ul>
+                
+                <form class="d-flex" onSubmit="return confirm('Do you want to submit?')" id="myForm">
+                <button class="btn btn-outline-light" type="submit">Submit Test</button>
+                </form>
+            </div>
+            </div>
+        </nav>
+    </div>
+    </div>
+  
+    <!-- Navbar Ends Here -->
+
+    <!-- Profile Box Start Here -->
+    <div class="container-fluid formbox align-items-center text-center p-0 my-4">
+        <div class="navbar container-fluid formbox bg-steelblue fw-bold fs-2 text-center text-light justify-content-center">
+            Quiz
+        </div>
+        <!-- form starts here with two column -->
+        <div class="row m-0">
+            <!-- first column -->
+            <div class="col">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid p-0">
+                      <a class="navbar-brand m-0" href="#"></a>
+                      <button class="navbar-toggler mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse row m-0 p-0 mx-2 border border-dark my-2 rounded-2 bg-light" id="sidebarSupportedContent">
+                        <!-- Content of togglebar Here -->
+                        <div class="btn fw-bold p-2">Select Question Here</div>
+                        <div class="mt-1 pb-2 text-dark font-monospace" id="questionsList">
+                        </div>
+
+                      </div> 
+                      <!-- Togglebar Ends here     -->
+                    </div>
+                </nav>
+            </div>
+            <!-- Second Column -->
+            <div class="container-fluid col-lg-8 bg-light">
+                <!-- Content of Input form start here -->
+              <div class="d-none d-lg-block"> 
+                <div class="mx-2 mt-3 mb-2">
+                  <!-- info bar starts here -->
+                  <div class="d-flex justify-content-between">
+
+                    <div class="btn btn-primary">
+                      QUESTION : <span name="questionNumber"></span>/<span name="questionAllCount"></span>
+                    </div>
+
+                    <div class="btn btn-warning font-monospace align-items-center rounded-0 border-2" onclick="bookmark(this.children[0])">
+                      <div class="bi-bookmark-plus" name="bookmark"> Bookmark</div>
+                    </div>
+
+                    <div class="">
+                      <select class="form-select rounded-0 no-shadow border-secondary border-2" aria-label="Default select example">
+                        <option selected>Questions Status</option>
+                        <option value="1" name="questionAll"></option>
+                        <option value="1" name="questionAnswered"></option>
+                        <option value="2" name="questionUnanswered"></option>
+                        <option value="3" name="questionBookmarked"></option>
+                      </select> 
+                    </div>
+                    
+                    <div class="btn btn-danger font-monospace align-items-center">
+                      <i class="bi bi-clock-history"> </i><span id="time1"></span>
+                    </div>
+                  </div>
+                  <!-- Content of Input form ends here -->
+                </div>
+              </div>
+
+              <div class="d-lg-none"> 
+                <div class="mx-2 my-3">
+                  <!-- info bar starts here -->
+                  <div class="d-flex">
+                    <div class="col-8">
+                      <select class="form-select rounded-0 no-shadow border-secondary border-2" aria-label="Default select example">
+                        <option selected>Questions Status</option>
+                        <option value="1" name="questionAll"></option>
+                        <option value="1" name="questionAnswered"></option>
+                        <option value="2" name="questionUnanswered"></option>
+                        <option value="3" name="questionBookmarked"></option>
+                      </select>
+                    </div>
+                    
+                    <div class="btn btn-danger font-monospace align-items-center col-4">
+                      <i class="bi bi-clock-history"> </i><span id="time2"></span>
+                    </div>
+                  </div>
+                  <!-- Content of Input form ends here -->
+                </div>
+
+                <div class="mx-2 my-3">
+                  <!-- info bar starts here -->
+                  <div class="d-flex">
+                    <div class="btn btn-primary col-6">
+                      QUESTION : <span name="questionNumber"></span>/<span name="questionAllCount"></span>
+                    </div>
+
+                    <div class="btn btn-warning font-monospace align-items-center col-6 border-2" onclick="bookmark(this.children[0])">
+                      <div class="bi-bookmark-plus" name="bookmark"> Bookmark</div>
+                    </div> 
+                  </div>
+                  <!-- Content of Input form ends here -->
+                </div>
+              </div>
+
+            <form action="" id="quiz">
+
+              <div class="border border-secondary m-2 hidden-tab">
+                <p class="border bg-info bg-opacity-25 p-3 m-2 fst-italic">This is first reference Text.</p>
+  
+                <p class="border bg-secondary bg-opacity-25 p-3 m-2 fw-bold">Who is the Prime minister of India?</p>
+  
+              <div class="m-2 pt-3">
+                <div class="row m-0 p-0 justify-content-around">
+
+                  <div class="col-lg-6 mb-3">
+                    <input type="radio" class="btn-check" name="btnradio1" id="btnradio11" autocomplete="off" value="1">
+                    <label class="btn btn-outline-success d-flex no-shadow" for="btnradio11" onclick="answerStatus()">Rahul Gandhi</label>
+                  </div>
+
+
+                  <div class="col-lg-6 mb-3">
+                    <input type="radio" class="btn-check" name="btnradio1" id="btnradio21" autocomplete="off" value="2">
+                    <label class="btn btn-outline-success d-flex no-shadow" for="btnradio21" onclick="answerStatus()">Mulayam Singh</label>
+                  </div>
+
+                  <div class="col-lg-6 mb-3">
+                    <input type="radio" class="btn-check" name="btnradio1" id="btnradio31" autocomplete="off" value="3">
+                    <label class="btn btn-outline-success d-flex no-shadow" for="btnradio31" onclick="answerStatus()">Mamta Banrji</label>
+                  </div>
+
+                  <div class="col-lg-6 mb-3">
+                    <input type="radio" class="btn-check" name="btnradio1" id="btnradio41" autocomplete="off" value="4">
+                    <label class="btn btn-outline-success d-flex no-shadow" for="btnradio41" onclick="answerStatus()">Narender Modi</label>
+                  </div>
+
+                </div>
+              </div>
+              
+              <!-- columns Ends -->
+              </div>
+
+              <div class="border border-secondary m-2 hidden-tab">
+                <p class="border bg-info bg-opacity-25 p-3 m-2 fst-italic">This is second reference Text.</p>
+  
+                <p class="border bg-secondary bg-opacity-25 p-3 m-2 fw-bold">Who is the President of India?</p>
+  
+                <div class="m-2 pt-3">
+                  <div class="row m-0 p-0 justify-content-around">
+  
+                    <div class="col-lg-6 mb-3">
+                      <input type="radio" class="btn-check" name="btnradio2" id="btnradio12" autocomplete="off" value="1">
+                      <label class="btn btn-outline-success d-flex no-shadow" for="btnradio12" onclick="answerStatus()">Ram Nath Kovid</label>
+                    </div>
+  
+  
+                    <div class="col-lg-6 mb-3">
+                      <input type="radio" class="btn-check" name="btnradio2" id="btnradio22" autocomplete="off" value="2">
+                      <label class="btn btn-outline-success d-flex no-shadow" for="btnradio22" onclick="answerStatus()">APJ Abdul Kalam</label>
+                    </div>
+  
+                    <div class="col-lg-6 mb-3">
+                      <input type="radio" class="btn-check" name="btnradio2" id="btnradio32" autocomplete="off" value="3">
+                      <label class="btn btn-outline-success d-flex no-shadow" for="btnradio32" onclick="answerStatus()">Dr. Manmohan Singh</label>
+                    </div>
+  
+                    <div class="col-lg-6 mb-3">
+                      <input type="radio" class="btn-check" name="btnradio2" id="btnradio42" autocomplete="off" value="4">
+                      <label class="btn btn-outline-success d-flex no-shadow" for="btnradio42" onclick="answerStatus()">Arvind Kejriwal</label>
+                    </div>
+  
+                  </div>
+                </div>
+                
+                <!-- columns Ends -->
+                </div>
+
+              <div class="border border-secondary m-2 hidden-tab">
+                <p class="border bg-info bg-opacity-25 p-3 m-2 fst-italic">This is third reference Text.</p>
+  
+                <p class="border bg-secondary bg-opacity-25 p-3 m-2 fw-bold">Who is known as Father of our nation?</p>
+  
+                <div class="m-2 pt-3">
+                  <div class="row m-0 p-0 justify-content-around">
+  
+                    <div class="col-lg-6 mb-3">
+                      <input type="radio" class="btn-check" name="btnradio3" id="btnradio13" autocomplete="off" value="1">
+                      <label class="btn btn-outline-success d-flex no-shadow" for="btnradio13" onclick="answerStatus()">Pt. Jawahar Lal</label>
+                    </div>
+  
+  
+                    <div class="col-lg-6 mb-3">
+                      <input type="radio" class="btn-check" name="btnradio3" id="btnradio23" autocomplete="off" value="2">
+                      <label class="btn btn-outline-success d-flex no-shadow" for="btnradio23" onclick="answerStatus()">Mahatma Gandhi</label>
+                    </div>
+  
+                    <div class="col-lg-6 mb-3">
+                      <input type="radio" class="btn-check" name="btnradio3" id="btnradio33" autocomplete="off" value="3">
+                      <label class="btn btn-outline-success d-flex no-shadow" for="btnradio33" onclick="answerStatus()">VB Patel</label>
+                    </div>
+  
+                    <div class="col-lg-6 mb-3">
+                      <input type="radio" class="btn-check" name="btnradio3" id="btnradio43" autocomplete="off" value="4">
+                      <label class="btn btn-outline-success d-flex no-shadow" for="btnradio43" onclick="answerStatus()">Lala Lajpat Ray</label>
+                    </div>
+  
+                  </div>
+                </div>
+                
+                <!-- columns Ends -->
+              </div>
+
+              <div class="border border-secondary m-2 hidden-tab">
+                <p class="border bg-info bg-opacity-25 p-3 m-2 fst-italic">This is fourth reference Text.</p>
+  
+                <p class="border bg-secondary bg-opacity-25 p-3 m-2 fw-bold">Who is known as Netaji?</p>
+  
+                <div class="m-2 pt-3">
+                  <div class="row m-0 p-0 justify-content-around">
+  
+                    <div class="col-lg-6 mb-3">
+                      <input type="radio" class="btn-check" name="btnradio4" id="btnradio14" autocomplete="off" value="1">
+                      <label class="btn btn-outline-success d-flex no-shadow" for="btnradio14" onclick="answerStatus()">Bhagat Singh</label>
+                    </div>
+  
+  
+                    <div class="col-lg-6 mb-3">
+                      <input type="radio" class="btn-check" name="btnradio4" id="btnradio24" autocomplete="off" value="2">
+                      <label class="btn btn-outline-success d-flex no-shadow" for="btnradio24" onclick="answerStatus()">Chander Shekhar Ajad</label>
+                    </div>
+  
+                    <div class="col-lg-6 mb-3">
+                      <input type="radio" class="btn-check" name="btnradio4" id="btnradio34" autocomplete="off" value="3">
+                      <label class="btn btn-outline-success d-flex no-shadow" for="btnradio34" onclick="answerStatus()">Subhash Chandra Bose</label>
+                    </div>
+  
+                    <div class="col-lg-6 mb-3">
+                      <input type="radio" class="btn-check" name="btnradio4" id="btnradio44" autocomplete="off" value="4">
+                      <label class="btn btn-outline-success d-flex no-shadow" for="btnradio44" onclick="answerStatus()">Mangal Pande</label>
+                    </div>
+  
+                  </div>
+                </div>
+                
+                <!-- columns Ends -->
+              </div>
+
+              <div class="border border-secondary m-2 hidden-tab">
+                <p class="border bg-info bg-opacity-25 p-3 m-2 fst-italic">This is fifth reference Text.</p>
+  
+                <p class="border bg-secondary bg-opacity-25 p-3 m-2 fw-bold">When India got independance from Britishers?</p>
+  
+              <div class="m-2 pt-3">
+                <div class="row m-0 p-0 justify-content-around">
+
+                  <div class="col-lg-6 mb-3">
+                    <input type="radio" class="btn-check" name="btnradio5" id="btnradio15" autocomplete="off" value="1">
+                    <label class="btn btn-outline-success d-flex no-shadow" for="btnradio15" onclick="answerStatus()">15 Aug 1947</label>
+                  </div>
+
+
+                  <div class="col-lg-6 mb-3">
+                    <input type="radio" class="btn-check" name="btnradio5" id="btnradio25" autocomplete="off" value="2">
+                    <label class="btn btn-outline-success d-flex no-shadow" for="btnradio25" onclick="answerStatus()">26 Jan 1950</label>
+                  </div>
+
+                  <div class="col-lg-6 mb-3">
+                    <input type="radio" class="btn-check" name="btnradio5" id="btnradio35" autocomplete="off" value="3">
+                    <label class="btn btn-outline-success d-flex no-shadow" for="btnradio35" onclick="answerStatus()">13 April 1919</label>
+                  </div>
+
+                  <div class="col-lg-6 mb-3">
+                    <input type="radio" class="btn-check" name="btnradio5" id="btnradio45" autocomplete="off" value="4">
+                    <label class="btn btn-outline-success d-flex no-shadow" for="btnradio45" onclick="answerStatus()">2 Oct 1869</label>
+                  </div>
+
+                </div>
+              </div>
+              
+              <!-- columns Ends -->
+              </div>
+
+            </form>
+
+            <div class="d-flex justify-content-end my-3 mx-2">
+              <button type="button" class="btn btn-outline-secondary" id="prevBtn" onclick="prevTab()">Previous</button>
+              <button type="button" class="btn btn-outline-danger mx-2" onclick="clearAns()">Clear Answer</button>
+              <button type="button" class="btn btn-outline-success" id="nextBtn" onclick="nextTab()">Next</button>
+            </div>
+
+            </div>
+    </div>
+    <!-- Profile Box Ends Here -->
+    </div>
+  </div>
+  <!-- main content ends here -->
+  <footer>
+        <div class="container-fluid p-1 bg-footer">
+          <div class="container-xxl p-3">
+            <div class="row">
+              <div class="col-xl-6">
+                <ul class="nav justify-content-center">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">© All rights reserved</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-xl-6">
+                <ul class="nav justify-content-center">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Active</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                  </li>
+                </ul>
+              </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="questions.js"></script>
+  <script src="quiz.js"></script>
+</body>
+</html>

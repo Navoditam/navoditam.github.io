@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type='text' id='input'>
+    <input type='text' id='output' disabled>
+</body>
+
+<script>
+
+var inputBox = document.getElementById('input');
+
+inputBox.onkeyup = function(){
+   var val = document.getElementById('input').value;
+   let ele = val;
+   ele = ele.split('-').join('');    // Remove dash (-) if mistakenly entered.
+   let finalVal = ele.match(/.{1,4}/g).join('-');
+   document.getElementById('output').value = finalVal;
+}
+
+
+</script>
+
+
+
+</html>

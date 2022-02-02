@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<label for="browser">Choose your browser from the list:</label>
+<input list="browsers" name="browser" id="browser" onclick="myfunction()">
+
+<datalist id="browsers" onclick="myfunction()">
+  <div>
+  <option value="Edge" onclick="myfunction()" data-option-type="1" label="Option 1">
+  <option value="Firefox" onselect="myfunction()" data-option-type="2" label="Option 2">
+  <option value="Chrome" onclick="myfunction()" data-option-type="3" label="Option 3">
+  <option value="Opera" onclick="myfunction()" data-option-type="4" label="Option 4">
+  <option value="Safari" onclick="myfunction()" data-option-type="5" label="Option 5" >
+  </div>
+</datalist>
+
+
+<h1 id="msg">h1</h1>
+</body>
+
+
+
+
+<script>
+
+var months= "2010_1,2010_3,2011_4,2011_7";
+
+monthArray2d = months.split(",").map(function(e) {
+    return e.split("_").map(Number);
+})
+
+
+document.getElementById
+console.log(monthArray2d);
+
+console.log(typeof monthArray2d);
+
+const myArray=monthArray2d;
+
+const output = myArray.map(([s_id, t_id]) => ({ s_id, t_id}));
+
+console.log(output)
+
+console.log(typeof output);
+
+</script>
+</html>

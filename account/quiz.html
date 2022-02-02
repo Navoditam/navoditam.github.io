@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="/_partials/bs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <style>
+        body {
+          min-height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+    </style>
+
+    <script>
+
+    function togglePassword() {
+      document.getElementById("togglePassword").classList.toggle('bi-eye-slash-fill');
+      var x = document.getElementById("password");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+
+    function inputUsername() {
+      document.getElementById("divUsername").classList.remove('visually-hidden');
+      document.getElementById("divPhone").classList.add('visually-hidden'); 
+      document.getElementById('inputPhone').value = null;
+    }
+
+    function inputPhone() {
+      document.getElementById("divUsername").classList.add('visually-hidden');
+      document.getElementById("divPhone").classList.remove('visually-hidden'); 
+      document.getElementById('inputUsername').value = null;
+    }
+
+
+
+    </script>
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+    <div class="row p-0 rounded-0 bg-light m-0" style="max-width: 400px;">
+
+      <div class="bg-steelblue py-2 px-4 text-light fs-1 fw-bold" role="alert">
+        vinitam<small class="fw-normal fs-6">.com</small>
+      </div>
+      
+      <div class="px-4">
+
+        <form class="my-2 text-dark">
+
+        <div class="p-0 py-0 text-dark fs-1 fw-bold" role="alert">
+          Sign In
+        </div>
+
+        <div class="mb-3">
+          Don't have an account? Signup here
+        </div>
+
+
+
+        <div class="input-group mb-3 border border-secondary" id="divUsername">
+          <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-circle"></i></span>
+          <input type="text" class="form-control border-0" placeholder="Username" id="inputUsername" aria-label="Username" aria-describedby="basic-addon1">
+          <span class="input-group-text alert-light"><i class="bi-phone-fill" role="button" title="Show Password" onclick="inputPhone()"></i></span>
+        </div>
+
+        <div class="input-group mb-3 border border-secondary visually-hidden" id="divPhone">
+          <span class="input-group-text" id="basic-addon1"><i class="bi bi-phone-fill"></i></span>
+          <input type="text" class="form-control border-0" placeholder="Phone Number" id="inputPhone" aria-label="Username" aria-describedby="basic-addon1">
+          <span class="input-group-text alert-light"><i class="bi-person-circle" role="button" title="Show Password" onclick="inputUsername()"></i></span>
+        </div>
+
+        <div class="input-group mb-3 border border-secondary">
+          <span class="input-group-text" id="basic-addon1"><i class="bi bi-shield-lock-fill"></i></span>
+          <input type="password" class="form-control border-0" placeholder="Password" id="password" aria-label="Password" aria-describedby="basic-addon1">
+          <span class="input-group-text alert-light"><i class="bi-eye-fill" role="button" id="togglePassword" title="Show Password" onclick="togglePassword()"></i></span>
+        </div>
+
+        <div class="mb-3 form-check align-center">
+          <input type="checkbox" class="form-check-input rounded-0" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Keep me logged in</label>
+        </div>
+
+        <div class="mb-3 d-grid">
+         <button type="submit" class="btn btn-outline-primary">Login</button>
+        </div>
+        
+        <div class="mb-3 d-flex justify-content-end fw-bold">
+          Forgot password?
+        </div>
+
+        <hr>
+
+        <div class="d-flex mb-3 justify-content-center">
+         <small>connect with vinitam.com</small>
+        </div>
+
+        <div class="d-flex mb-3 justify-content-center">
+          <span><a href="https://www.facebook.com/"><i class="bi bi-facebook mx-2"></i></a></span>
+          <span><a class="text-danger" href="https://www.youtube.com/"><i class="bi bi-youtube mx-2"></i></a></span>
+          <span><a href="https://www.twitter.com/"><i class="bi bi-twitter mx-2"></i></a></span>
+          <span><a class="text-danger" href="https://www.instagram.com/"><i class="bi bi-instagram mx-2"></i></a></span>
+          <span><a class="text-success" href="https://api.whatsapp.com/send?phone=+919468021570"><i class="bi bi-whatsapp mx-2"></i></a></span>
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  </body>
+</html>

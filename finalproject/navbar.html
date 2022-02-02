@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/_partials/bs.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src="/_partials/bs.js"></script>
+    <title>Document</title>
+</head>
+<body>
+  <!-- set content height 100vh -->
+  <div class="min-vh-100">
+    <!-- Navbar Starts Here -->
+    <div class="container-fluid sticky-top bg-darkblue">
+    <div class="container-xxl">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="#">Vinitam</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                </li>
+                </ul>
+                <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-primary" type="submit">Search</button>
+                </form>
+            </div>
+            </div>
+        </nav>
+    </div>
+    </div>
+    <!-- Navbar Ends Here -->
+
+    <!-- Profile Box Start Here -->
+    <div class="container-fluid formbox align-items-center text-center p-0 my-4">
+        <div class="navbar container-fluid formbox bg-steelblue fw-bold fs-2 text-center text-light justify-content-center">
+            Student Profile
+        </div>
+        <!-- form starts here with two column -->
+        <div class="row m-0">
+            <!-- first column -->
+            <div class="col">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid p-0">
+                      <a class="navbar-brand m-0" href="#"></a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="sidebarSupportedContent">
+                        <!-- Content of togglebar Here -->
+                        <div class="container-fluid p-0 mb-3 text-dark">
+                          <div class="navbar m-0 mt-3 rounded-0 container-fluid p-0 mb-2 fs-4 fw-bold justify-content-center align-self-center">
+                            <div class="col-10 justify-content-center align-self-center text-center" >
+                              <!-- Carousel Start Here -->
+                              <div id="carouselExampleCaptions" class="carousel slide" data-bs-interval="false">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img src="\partials\student.jpg" class="d-block w-100 border border-primary" alt="" onerror="this.onerror=null; this.src='/_partials/boy.png'">
+                                    <div class="d-block text-light fs-6 p-1 bg-steelblue">
+                                      Ajay Singh
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="\partials\dad.jpg" class="d-block w-100 border border-primary" alt="" onerror="this.onerror=null; this.src='/_partials/man.png'">
+                                    <div class="d-block text-light fs-6 p-1 bg-steelblue">
+                                    Sh. Vijay Kumar
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item align-text-bottom align-bottom m-0 p-0">
+                                    <img src="\partials\mom.jpg" class="d-block w-100 align-text-bottom m-0 p-0 border border-primary" alt="" onerror="this.onerror=null; this.src='/_partials/woman.png'">
+                                    <div class="fs-6 align-text-bottom p-1 m-0 d-block text-light bg-steelblue">
+                                    Smt. Shweta Devi
+                                    </div>
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev fs-6 p-1" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                  <span class="bi bi-caret-left-fill"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next fs-6 p-1" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                  <span class="bi bi-caret-right-fill"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
+                              <!-- End of Crousel -->
+                            </div>
+                          </div>
+          
+                          <div class="col-sm-12 text-center mb-2">
+                            Aadhaar No. : <b>1234-5847-9685</b>
+                          </div>
+                          <div class="col-sm-12 text-center mb-2">
+                            Student Name : <b>Ajay Singh</b>
+                          </div>
+                          <div class="col-sm-12 text-center mb-2">
+                            Father's Name : <b>Sh. Vijay Kumar</b>
+                          </div>
+                          <div class="col-sm-12 text-center mb-2">
+                            Mother's Name : <b>Smt. Shweta Devi</b>
+                          </div>
+                          <div class="col-sm-12 text-center mb-2">
+                            Address : <b>VPO Dhiktana (Hisar)</b>
+                          </div>
+
+                        </div>
+                        <!-- Togglebar Ends here     -->
+                      </div>
+                    </div>
+                </nav>
+            </div>
+            <!-- Second Column -->
+            <div class="container-fluid col-lg-8 bg-light">
+                <!-- Content of Input form here -->
+            </div>
+            <!-- columns Ends -->
+        </div>
+    </div>
+    <!-- Profile Box Ends Here -->
+  </div>
+  <!-- main content ends here -->
+    <footer>
+        <div class="container-fluid p-1 bg-footer">
+          <div class="container-xxl p-3">
+            <div class="row">
+              <div class="col-xl-6">
+                <ul class="nav justify-content-center">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">© All rights reserved</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-xl-6">
+                <ul class="nav justify-content-center">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Active</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    </footer>
+</body>
+</html>
