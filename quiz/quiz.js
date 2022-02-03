@@ -1,7 +1,7 @@
 window.onload = function(){
     let testTime = 60*10;
     startTimer(testTime);
-    setTimeout(onSubmit, testTime*1000+1000);
+    setTimeout(autoSubmitForm, testTime*1000+1000);
 };
 
 var currentTab = 0;
@@ -14,9 +14,33 @@ var answeredArray;
 
 function onSubmit(){
     answeredArray = $('form').serializeArray();
+    let boolstr = confirm("Do you confirm to submit the test?");
+    if (boolstr){
+        if ((marksObtained/numberOfQuestions)*100<50){
+            alert("Your test has been submitted successfully.\nYour score is : "+marksObtained+"/"+numberOfQuestions+"\nYour good is still to come. Try Again!\nRegards\nAbhinav Gurukul")
+        }
+        else if ((marksObtained/numberOfQuestions)*100<70){
+            alert("Your test has been submitted successfully.\nYour score is : "+marksObtained+"/"+numberOfQuestions+"\nYou are going Good. Go for better!\nRegards\nAbhinav Gurukul")
+        }
+        else {
+            alert("Your test has been submitted successfully.\nYour score is : "+marksObtained+"/"+numberOfQuestions+"\nExcellent. You are going to make us proud one day!\nRegards\nAbhinav Gurukul")
+        }
+        location.reload()
+    }
+}
+
+function autoSubmitForm(){
+    answeredArray = $('form').serializeArray();
     quizResult()
-    // let msg = "Your score is : "+marksObtained;
-    // alert(msg);
+    if ((marksObtained/numberOfQuestions)*100<50){
+        alert("Your test has been submitted automatically.\nYour score is : "+marksObtained+"/"+numberOfQuestions+"\nYour good is still to come. Try Again!\nRegards\nAbhinav Gurukul")
+      }
+      else if ((marksObtained/numberOfQuestions)*100<70){
+        alert("Your test has been submitted automatically.\nYour score is : "+marksObtained+"/"+numberOfQuestions+"\nYou are going Good. Go for better!\nRegards\nAbhinav Gurukul")
+      }
+      else {
+        alert("Your test has been submitted automatically.\nYour score is : "+marksObtained+"/"+numberOfQuestions+"\nExcellent. You are going to make us proud one day!\nRegards\nAbhinav Gurukul")
+      }
     location.reload()
 }
 
