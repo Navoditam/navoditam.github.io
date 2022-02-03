@@ -1,7 +1,7 @@
 window.onload = function(){
     let testTime = 60*10;
     startTimer(testTime);
-    setTimeout(submitForm, testTime*1000+1000);
+    setTimeout(onSubmit, testTime*1000+1000);
 };
 
 var currentTab = 0;
@@ -178,11 +178,6 @@ function questionAnsweredFn(){
         }
     }
     questionNumber()
-}
-
-function submitForm(){
-    document.getElementById("myForm").submit();
-    alert('Your Test has been Submitted successfully')
 }
 
 function startTimer(duration) {
