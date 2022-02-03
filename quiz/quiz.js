@@ -1,5 +1,5 @@
 window.onload = function(){
-    let testTime = 60*10;
+    let testTime = 60*4;
     startTimer(testTime);
     setTimeout(autoSubmitForm, testTime*1000+1000);
 };
