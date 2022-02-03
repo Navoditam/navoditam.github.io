@@ -1,16 +1,24 @@
 window.onload = function(){
-    let testTime = 60*20;
+    let testTime = 60*10;
     startTimer(testTime);
     setTimeout(submitForm, testTime*1000+1000);
 };
 
-myRandomInts(40, 51);
-runConsole()
 var currentTab = 0;
 var questionAnswered = 0;
 var questionBookmarked = 0;
 listQuestionsBox();
 showTab(currentTab);
+
+var answeredArray;
+
+function onSubmit(){
+    answeredArray = $('form').serializeArray();
+    quizResult()
+    // let msg = "Your score is : "+marksObtained;
+    // alert(msg);
+    location.reload()
+}
 
 function showTab(n){
 
@@ -28,6 +36,7 @@ function showTab(n){
     }
 
     questionNumber();
+
 }
 
 function nextTab(){
