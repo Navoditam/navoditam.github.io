@@ -11,7 +11,6 @@ listQuestionsBox();
 showTab(currentTab);
 
 var answeredArray;
-
 function onSubmit(){
     answeredArray = $('form').serializeArray();
     let boolstr = confirm("Do you confirm to submit the test?");
@@ -26,7 +25,8 @@ function onSubmit(){
         else {
             alert("Your test has been submitted successfully.\nYour score is : "+marksObtained+"/"+numberOfQuestions+"\nExcellent. You are going to make us proud one day!\nRegards\nAbhinav Gurukul")
         }
-        location.reload()
+        alert(strAns)
+        // location.reload()
     }
 }
 
@@ -42,6 +42,7 @@ function autoSubmitForm(){
       else {
         alert("Your test has been submitted automatically.\nYour score is : "+marksObtained+"/"+numberOfQuestions+"\nExcellent. You are going to make us proud one day!\nRegards\nAbhinav Gurukul")
       }
+      alert(strAns)
     location.reload()
 }
 
