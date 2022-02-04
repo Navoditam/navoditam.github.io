@@ -70,13 +70,23 @@ function quizResult(){
   for (let i=0; i<answerArray.length; i++){
     for (let j=0; j<answeredArray.length; j++){
         if (answerArray[i].name == answeredArray[j].name){
-          console.log("Name Matched")
           if (answerArray[i].value == answeredArray[j].value){
-            console.log("Value Matched")
             marksObtained++
           }
+          else {
+            let x = randomIntArr[i]
+            let ques = questionArray[x][0];
+            let ans =  questionArray[x][answerArray[i].value]
+            strAns+=("QUE: "+ques+"\nANS: "+ans+"\n")
+          }
         }
-    }
-  }
+        else{
+          let x = randomIntArr[i]
+            let ques = questionArray[x][0];
+            let ans =  questionArray[x][answerArray[i].value]
+            strAns+=("QUE: "+ques+"\nANS: "+ans+"\n")
+          }
+        }
+      }  
 }
 
