@@ -15,6 +15,7 @@ var answeredArray;
 function onSubmit(){
     answeredArray = $('form').serializeArray();
     let boolstr = confirm("Do you confirm to submit the test?");
+    quizResult()
     if (boolstr){
         if ((marksObtained/numberOfQuestions)*100<50){
             alert("Your test has been submitted successfully.\nYour score is : "+marksObtained+"/"+numberOfQuestions+"\nYour good is still to come. Try Again!\nRegards\nAbhinav Gurukul")
@@ -31,6 +32,7 @@ function onSubmit(){
 
 function autoSubmitForm(){
     answeredArray = $('form').serializeArray();
+    quizResult()
     if ((marksObtained/numberOfQuestions)*100<50){
         alert("Your test has been submitted automatically.\nYour score is : "+marksObtained+"/"+numberOfQuestions+"\nYour good is still to come. Try Again!\nRegards\nAbhinav Gurukul")
       }
