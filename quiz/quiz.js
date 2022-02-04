@@ -31,7 +31,6 @@ function onSubmit(){
 
 function autoSubmitForm(){
     answeredArray = $('form').serializeArray();
-    quizResult()
     if ((marksObtained/numberOfQuestions)*100<50){
         alert("Your test has been submitted automatically.\nYour score is : "+marksObtained+"/"+numberOfQuestions+"\nYour good is still to come. Try Again!\nRegards\nAbhinav Gurukul")
       }
