@@ -80,15 +80,15 @@ function quizResult(){
             let ans =  questionArray[x][answerArray[i].value]
             strAns+=("QN"+(i+1)+": "+ques+"\nANS: "+ans+"\n")
           }
+          break;
         }
-        else{
+        else if(j==answeredArray.length-1){
           let x = randomIntArr[i]
-            let ques = questionArray[x][0];
-            let ans =  questionArray[x][answerArray[i].value]
-            strAns+=("QUE"+(i+1)+": "+ques+"\nANS: "+ans+"\n")
+          let ques = questionArray[x][0];
+          let ans =  questionArray[x][answerArray[i].value]
+          strAns+=("QN"+(i+1)+": "+ques+"\nANS: "+ans+"\n")
           }
         }
-      } 
-    console.log(strAns);
+    } 
 }
 
