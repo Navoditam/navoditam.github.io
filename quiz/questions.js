@@ -78,16 +78,5 @@ function quizResult(){
         }
     }
   }
-
-  if ((marksObtained/numberOfQuestions)*100<50){
-    alert("Your score is : "+marksObtained+"/"+numberOfQuestions+"\nYour good is still to come. Try Again!\nRegards\nAbhinav Gurukul")
-  }
-  else if ((marksObtained/numberOfQuestions)*100<70){
-    alert("Your score is : "+marksObtained+"/"+numberOfQuestions+"\nYou are going Good. Go for better!\nRegards\nAbhinav Gurukul")
-  }
-  else {
-    alert("Your score is : "+marksObtained+"/"+numberOfQuestions+"\nExcellent. You are going to make us proud one day!\nRegards\nAbhinav Gurukul")
-  }
-  
 }
 
