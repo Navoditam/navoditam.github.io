@@ -65,6 +65,7 @@ function loadQuestions(){
 }
 
 var marksObtained = 0;
+var strAns = "CORRECTED ANSWER(S)\n";
 
 function quizResult(){
   for (let i=0; i<answerArray.length; i++){
@@ -77,16 +78,17 @@ function quizResult(){
             let x = randomIntArr[i]
             let ques = questionArray[x][0];
             let ans =  questionArray[x][answerArray[i].value]
-            strAns+=("QUE: "+ques+"\nANS: "+ans+"\n")
+            strAns+=("QN"+(i+1)+": "+ques+"\nANS: "+ans+"\n")
           }
         }
         else{
           let x = randomIntArr[i]
             let ques = questionArray[x][0];
             let ans =  questionArray[x][answerArray[i].value]
-            strAns+=("QUE: "+ques+"\nANS: "+ans+"\n")
+            strAns+=("QUE"+(i+1)+": "+ques+"\nANS: "+ans+"\n")
           }
         }
-      }  
+      } 
+    console.log(strAns);
 }
 
