@@ -26,7 +26,7 @@ function onSubmit(){
             alert("Your test has been submitted successfully.\nYour score is : "+marksObtained+"/"+numberOfQuestions+"\nExcellent. You are going to make us proud one day!\nRegards\nAbhinav Gurukul")
         }
         alert(strAns)
-        // location.reload()
+        location.reload()
     }
 }
 
